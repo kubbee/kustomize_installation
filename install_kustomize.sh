@@ -148,6 +148,10 @@ fi
 
 RELEASE_URL="$(find_release_url "$releases" "$opsys" "$arch")"
 
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "$RELEASE_URL"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  
 if [[ "$arch" == "arm64" ]] && [[ -z "$RELEASE_URL" ]] ; then
     # fallback to the old behavior of downloading amd64 binaries on aarch64 systems.
     # People might have qemu-binfmt-misc installed, so it worked for them previously.
@@ -157,9 +161,6 @@ if [[ "$arch" == "arm64" ]] && [[ -z "$RELEASE_URL" ]] ; then
 fi
 
 if [[ -z "$RELEASE_URL" ]]; then
-  
-  echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-  echo "$RELEASE_URL"
   echo "Version $version does not exist or is not available for ${opsys}/${arch}."
   exit 1
 fi
