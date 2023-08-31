@@ -149,7 +149,7 @@ fi
 RELEASE_URL="$(find_release_url "$releases" "$opsys" "$arch")"
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-echo $releases $opsys $arch
+echo "release $releases sys $opsys arch $arch"
 echo $release_url
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   
