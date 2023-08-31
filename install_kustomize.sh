@@ -149,7 +149,7 @@ fi
 RELEASE_URL="$(find_release_url "$releases" "$opsys" "$arch")"
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-echo $RELEASE_URL
+echo "$(find_release_url "$releases" "$opsys" "$arch")"
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   
 if [[ "$arch" == "arm64" ]] && [[ -z "$RELEASE_URL" ]] ; then
