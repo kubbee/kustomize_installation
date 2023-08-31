@@ -157,7 +157,9 @@ if [[ "$arch" == "arm64" ]] && [[ -z "$RELEASE_URL" ]] ; then
 fi
 
 if [[ -z "$RELEASE_URL" ]]; then
-  echo $RELEASE_URL
+  
+  echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  echo "$RELEASE_URL"
   echo "Version $version does not exist or is not available for ${opsys}/${arch}."
   exit 1
 fi
